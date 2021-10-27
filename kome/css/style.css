@@ -13,11 +13,11 @@ header {
   margin: 0 auto;
   padding: 0;
   background: #FFF;
-	position: relative;
-  height: 60vw!important;
+  position: relative;
+  height: 60vw !important;
   max-height: 500px;
   max-width: 1000px;
-	background: url(../img/header.png) center / cover;
+  background: url(../img/header.png) center / cover;
 }
 
 footer {
@@ -244,19 +244,83 @@ h1 span {
 .section__image {
   text-align: center;
 }
+
 .section__image img {
   width:80%;
   max-width: 80%;
   height: auto;
 }
 
+.link__box {
+  background: #FCDCAB;
+  border: none;
+  padding:10px;
+  display: flex;
+  margin: 20px 0 20px 0;
+  border-radius: 12px;
+}
+
+.link__box:hover {
+  background-color:#F7F1E2;
+  -webkit-transition:background-color .35s;
+  transition:background-color .35s
+}
+
+.link__box__wrap {
+  width:  100%;
+  margin: 20px 0 0 0;
+}
+
+.img__box {
+  width: 30%;
+  float: left;
+}
+
+.img__box img { 
+  border-radius: 12px;
+  height: 15vw !important;
+}
+
+.text__box {
+  width:70%;
+  float: left;
+  padding: 5px 10px 10px 20px;
+  margin: 0;
+}
+
+.text__box .title {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text__box .description {
+  font-size: 80%;
+  color: #000;
+  text-decoration: none;
+  overflow-wrap: break-word;
+}
+
+
 @media all and (max-width: 768px) {
   .main {
-    display: block;
+    font-size: 100%;
     width: 100%;
     background: #F7F1E2;
+    display: block;
   }
+  
   .sidebar {
     display:none;
+  }
+
+  h1 {
+    font-size: 160%;
+  }
+
+  .text__box {
+    width:70%;
+    padding: 0px 5px 0px 10px;
+    margin: 0;
   }
 }
