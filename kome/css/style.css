@@ -13,11 +13,6 @@ header {
   margin: 0 auto;
   padding: 0;
   background: #FFF;
-  position: relative;
-  height: 60vw !important;
-  max-height: 500px;
-  max-width: 1000px;
-  background: url(../img/header_pc.png) center / cover;
 }
 
 footer {
@@ -77,7 +72,6 @@ h1 span {
   background: #F7F1E2;
   padding: 10px;
   margin: 0 auto;
-  padding: 10px;
 }
 
 .sidebar {
@@ -157,8 +151,10 @@ h1 span {
   padding-bottom: 10px;
 }
 
+
 .chat__right {
   justify-content:flex-end;
+  margin-right: 20px;
 }
 
 .face__icon img {
@@ -315,6 +311,13 @@ h1 span {
 
 /** PCのみ **/
 @media all and (min-width: 769px) {
+  body
+  header {
+    position: relative;
+    height: 50vw !important;
+    background: url(../img/pc_header_bg.png) center / cover;
+  }
+
   .footer__wrap {
     margin: 0 auto;
     padding: 0;
@@ -340,15 +343,11 @@ h1 span {
 
 /** スマホ・タブレット **/
 @media all and (max-width: 768px) {
+
   header {
-    margin: 0 auto;
-    padding: 0;
-    background: #FFF;
     position: relative;
-    height: 120vh !important;
-    max-height: 700px;
-    max-width: 768px;
-    background: url(../img/header_sp.png) center / cover;
+    height: 120vw !important;
+    background: url(../img/sp_header_bg.png) center / cover;
   }
 
   footer {
@@ -383,14 +382,16 @@ h1 span {
   }
 
   .main {
-    font-size: 100%;
-    width: 100%;
-    background: #F7F1E2;
     display: block;
+    width: 96%;
+    font-size: 120%;
+    background: #F7F1E2;
     padding: 10px;
+    margin: 0 auto;
   }
 
   .sidebar {
+    width: 0%;
     display:none;
   }
 
