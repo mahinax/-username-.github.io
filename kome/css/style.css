@@ -119,20 +119,6 @@ h1 span {
   margin-bottom: 0.5em;
 }
 
-.sidebar__item__menu ol li {
-  display: table-row;
-  counter-increment: table-ol;
-  margin-bottom: 0.5em;
-}
-
-.sidebar__item__menu ol li:before {
-  content: counter(table-ol);
-  font-weight: bold;
-  font-size: 120%;
-  display: table-cell;
-  padding-right: 0.4em;
-}
-
 .sidebar__item__menu ol li > a {
   color: #000;
   font-weight: bold;
@@ -344,6 +330,24 @@ h1 span {
     margin-top: auto;
     padding-right: 10px;
   }
+
+  .sidebar__item__menu ol li {
+    display: table-row;
+    counter-increment: table-ol;
+    margin-bottom: 0.5em;
+    background: url(../img/rice_icon_pc_normal.svg) no-repeat 0 0;
+    background-size: auto 30px;
+  }
+
+  .sidebar__item__menu ol li:before {
+    content: counter(table-ol);
+    font-weight: bold;
+    font-size: 120%;
+    display: table-cell;
+    padding-top: 0.2em;
+    padding-right: 0.4em;
+    padding-left: 0.3em;
+  }
 }
 
 /** スマホ・タブレット **/
@@ -400,6 +404,23 @@ h1 span {
 
   .sidebar__sp {
     display: block;
+  }
+
+  .sidebar__item__menu ol li {
+    display: table-row;
+    counter-increment: table-ol;
+    margin-bottom: 0.5em;
+    background: url(../img/rice_icon_pc_normal.svg) no-repeat 0 0;
+    background-size: auto 34px;
+  }
+
+  .sidebar__item__menu ol li:before {
+    content: counter(table-ol);
+    font-weight: bold;
+    font-size: 100%;
+    display: table-cell;
+    padding-right: 0.4em;
+    padding-left: 0.35em;
   }
 
   h1 {
