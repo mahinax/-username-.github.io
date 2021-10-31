@@ -300,7 +300,6 @@ h1 span {
 
 /** PCのみ **/
 @media all and (min-width: 769px) {
-  body
   header {
     position: relative;
     height: 50vw !important;
@@ -410,8 +409,6 @@ h1 span {
     display: table-row;
     counter-increment: table-ol;
     margin-bottom: 0.5em;
-    background: url(../img/rice_icon_sp.svg) no-repeat 0 0;
-    background-size: auto 34px;
   }
 
   .sidebar__item__menu ol li:before {
@@ -421,6 +418,8 @@ h1 span {
     display: table-cell;
     padding-right: 0.4em;
     padding-left: 0.3em;
+    background: url(../img/rice_icon_sp.svg) no-repeat 0 0;
+    background-size: auto 34px;
   }
 
   h1 {
