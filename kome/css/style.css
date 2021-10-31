@@ -334,8 +334,6 @@ h1 span {
     display: table-row;
     counter-increment: table-ol;
     margin-bottom: 0.5em;
-    background: url(../img/rice_icon_pc_normal.svg) no-repeat 0 0;
-    background-size: auto 30px;
   }
 
   .sidebar__item__menu ol li:before {
@@ -347,6 +345,18 @@ h1 span {
     padding-right: 0.4em;
     padding-left: 0.25em;
   }
+
+  .sidebar__nav, .sidebar__nav__1, .sidebar__nav__2, .sidebar__nav__3, .sidebar__nav__4 {
+    background: url(../img/rice_icon_pc_normal.svg) no-repeat 0 0;
+    background-size: auto 30px;
+  }
+
+  .sidebar__nav__active, .sidebar__nav__1__active, .sidebar__nav__2__active, .sidebar__nav__3__active, .sidebar__nav__4__active {
+    background: url(../img/rice_icon_pc_active.svg) no-repeat 0 0;
+    background-size: auto 30px;
+    color: #FFF;
+  }
+
 }
 
 /** スマホ・タブレット **/

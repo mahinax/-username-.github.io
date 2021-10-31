@@ -20,11 +20,53 @@
 <!-- 後で消す START -->
   <meta name=”robots” content=”noindex,nofollow,noarchive”>
 <!-- 後で消す END -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com/">
   <link href="./css/style.css" media="all" rel="stylesheet" type="text/css">
 <!-- 最終稿必須 START -->
   <link rel="”canonical”" href="https://mahinax.github.io/kome/">
 <!-- 最終稿必須 END -->
+<script>
+  $(function() {
+    var scrollMenu = function() {
+      var index_list = {
+        '#index0': 0,
+        '#index1': 0,
+        '#index2': 0,
+        '#index3': 0,
+        '#index4': 0
+      };
+
+		  var $scroll_nav = new Array();
+
+      for (var key in index_list) {
+        if ($(key).offset()) {
+          index_list[key] = $(key).offset().top - 10;
+          $scroll_nav[key] = $('.sidebar__item__menu ol li a[href="' + key + '"]');
+        }
+      }
+
+      $(window).scroll(function () {
+        var active_index;
+        for (var key in index_list) {
+          if ($(window).scrollTop() > index_list[key] - 50) {
+            active_index = key;
+            $('.sidebar__item__menu ol li a').each(function() {
+              $(this).parent().removeClass('sidebar__nav__active');
+            });
+          }
+        }
+        $scroll_nav[active_index].parent().addClass('sidebar__nav__active');
+		  });
+	  }
+
+    // 実行
+    scrollMenu();
+  });
+</script>
 </head>
 <body>
   <header></header>
@@ -34,15 +76,16 @@
         <div class="sidebar__item__menu">
           <div class="sidebar__header">検査米のヒミツ</div>
           <ol>
-            <li><a href="#index1">安心の証！検査米</a></li>
-            <li><a href="#index2">JAグループのお米は検査米が原則！</a></li>
-            <li><a href="#index3">米袋はマストチェック！</a></li>
-            <li><a href="#index4">美味しさも守る検査米</a></li>
+            <li class="sidebar__nav"><a href="#index1">安心の証！検査米</a></li>
+            <li class="sidebar__nav"><a href="#index2">JAグループのお米は検査米が原則！</a></li>
+            <li class="sidebar__nav"><a href="#index3">米袋はマストチェック！</a></li>
+            <li class="sidebar__nav"><a href="#index4">美味しさも守る検査米</a></li>
           </ol>
         </div>
       </div>
     </div>
     <main class="main">
+      <section id="index0"></section>
       <div class="chat__left">
         <div class="face__icon">
           <img src="./img/chat_rice_rider.jpg">
@@ -88,8 +131,8 @@
       <div class="sidebar__sp">
         <div class="sidebar__item__menu">
           <div class="sidebar__header">検査米のヒミツ</div>
-          <ol class="list_test-wrap">
-            <li class="list_test"><a href="#index1">安心の証！検査米</a></li>
+          <ol>
+            <li><a href="#index1">安心の証！検査米</a></li>
             <li><a href="#index2">JAグループのお米は検査米が原則！</a></li>
             <li><a href="#index3">米袋はマストチェック！</a></li>
             <li><a href="#index4">美味しさも守る検査米</a></li>
